@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }
+        .container { margin: 20px auto; width: 320px; }
+        .screen { background: #fff; height: 60px; margin-bottom: 20px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);}
+        .row { display: flex; justify-content: center; margin: 5px 0;}
+        .seat { background: #444451; height: 30px; width: 30px; margin: 3px; border-radius: 5px; display: inline-block; cursor: pointer;}
+        .seat.selected { background: #6feaf6; }
+        .seat.occupied { background: #fff; cursor: not-allowed;}
+    </style>
+</head>
+<body>
+    <h2>ENJOYMENT MOVIE TICKET BOOKING</h2>
+    <div class="container">
+        <div>
+            <label for="movie">select a movie:</label>
+            <select id="movie">
+                <option value="10">Avengers: Endgame (Rs.100)</option>
+                <option value="12">Joker (Rs.120)</option>
+                <option value="8">Toy Story 4 (Rs .80)</option>
+                <option value="9">The Lion King (Rs.90)</option>
+            </select>
+        </div>
+        <div class="screen"></div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat selected"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <p>You have selected <span id="count">1</span> seat for a price of Rs<span id="total">20</span>.</p>
+    </div>
+    <!-- Add simple JS for dynamic selection and price calculation -->
+</body>
+</html>
